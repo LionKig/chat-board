@@ -1,566 +1,616 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
-
 * {
-  font-family: Montserrat;
-  box-sizing: border-box;
-  color: #333;
+    font-family: Montserrat;
+    box-sizing: border-box;
+    color: #586577;
 }
 
 body {
-  font-size: 16px;
+    font-size: 16px;
 }
 
 html,
 body {
-  font-family: "Roboto", sans-serif;
-  padding: 0;
-  margin: 0;
+    font-family: "Roboto", sans-serif;
+    padding: 0;
+    margin: 0;
 }
 
 #root {
-  height: 100vh;
-}
-
-* {
-  box-sizing: border-box;
+    height: 100vh;
 }
 
 *::-webkit-scrollbar {
-  width: 0.5em;
+    width: 0.5em;
 }
+
 *::-webkit-scrollbar-track-piece {
-  background: #ccc;
+    background: #ccc;
 }
+
 *::-webkit-scrollbar-thumb {
-  background-color: #888;
-  border-radius: 50px;
+    background-color: #888;
+    border-radius: 50px;
 }
 
 .swal2-container {
-  z-index: 2000;
+    z-index: 2000;
 }
 
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
+
+
+/* CopyRight */
+.authcopyrow {
+    height: 100%;
+    width: 80%;
+    display: grid;
+    flex-wrap: wrap;
+}
+
+.authcopyrow>div {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-right: 10vw;
+}
+
 
 /* Authentication */
 
+.authloginrow {
+    height: 100%;
+    width: 20%;
+    background-color: #939999;
+    align-items: center;
+}
+
 .authOuterContainer {
-  display: inline-flex;
-  flex-direction: row;
-  justify-content: center;
-  text-align: center;
-  height: 100vh;
-  width:100vw;
-  align-items: center;
-  background-color: #1a1a1d;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    background-color: #112233;
 }
 
 .authInnerContainer {
-  height: fit-content;
-  width: fit-content;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  border-radius: 4px;
-  background-color: #ffffff;
+    height: 100vh;
+    padding-left: 2%;
+    padding-right: 5%;
+    width: 20%;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    border-radius: 4px;
+    background-color: #939999;
+    display: grid;
 }
 
+.authInnerContainer>h3{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.authInnerContainer>div{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    align-content: stretch;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+
 .authHeading {
-  color: #fafbfc;
-  font-size: 3em;
-  font-weight: normal;
+    color: #fafbfc;
+    font-size: 3em;
+    font-weight: normal;
 }
 
 span.material-icons.MuiIcon-root.authChatIcon {
-  color: #fafbfc;
-  font-size: 1em;
+    color: #fafbfc;
+    font-size: 1em;
+}
+
+div[class^="max-width:425px"] {
+    flex-wrap: wrap;
 }
 
 div[class^="makeStyles-root-"] {
-  width: 30vw !important;
-  height: 60vh !important;
+    width: 30vw !important;
+    height: 60vh !important;
 }
 
 div[class^="makeStyles-paper-"] {
-  margin-top: 10%;
-  justify-content: center;
+    margin-top: 10%;
+    justify-content: center;
 }
 
 div[class^="MuiBox-root MuiBox-root-"] {
-  padding: 6px;
+    padding: 6px;
 }
 
 button[class^="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-submit-"] {
-  padding: 10px !important;
+    padding: 10px !important;
 }
 
 .MuiButton-label {
-  color: white;
+    color: white;
 }
 
 @media only screen and (max-width: 1000px) {
-  div[class^="makeStyles-root-"] {
-    width: 40vw !important;
-  }
+    div[class^="makeStyles-root-"] {
+        width: 40vw !important;
+    }
 }
 
 @media only screen and (max-width: 770px) {
-  div[class^="makeStyles-root-"] {
-    width: 60vw !important;
-  }
+    div[class^="makeStyles-root-"] {
+        width: 60vw !important;
+    }
 }
 
 @media only screen and (max-width: 450px) {
-  div[class^="makeStyles-root-"] {
-    width: 80vw !important;
-  }
+    div[class^="makeStyles-root-"] {
+        width: 80vw !important;
+    }
 }
+
 
 /* Dashboard */
 
 p.dashboardHeaderName {
-  color: #fafbfc;
-  margin: 0;
+    color: #fafbfc;
+    margin: 0;
 }
 
 span.material-icons.MuiIcon-root.dashboardHeaderIcon {
-  color: #fafbfc;
+    color: #fafbfc;
 }
 
 p.dashboardUsername {
-  color: #f50057;
-  font-size: 0.6em;
-  margin: 0;
+    color: #f50057;
+    font-size: 0.6em;
+    margin: 0;
 }
 
 main.dashboardMainContent {
-  position: absolute;
-  top: -25px;
-  height: 85vh;
-  left: 300px;
+    position: absolute;
+    top: -25px;
+    height: 85vh;
+    left: 300px;
 }
 
 div.MuiToolbar-root.MuiToolbar-regular.MuiToolbar-gutters {
-  display: flex;
-  justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 }
 
 @media only screen and (max-width: 600px) {
-  main.dashboardMainContent {
-    top: -35px;
-    left: 0;
-  }
+    main.dashboardMainContent {
+        top: -35px;
+        left: 0;
+    }
 }
+
 
 /* Channel */
 
 .channelOuterContainer {
-  display: flex;
-  justify-content: space-between;
-  width: 78vw;
-  height: 103%;
+    display: flex;
+    justify-content: space-between;
+    width: 78vw;
+    height: 103%;
 }
 
 .channelInnerContainer {
-  position: relative;
-  width: 73%;
-  height: 100%;
+    position: relative;
+    width: 73%;
+    height: 100%;
 }
 
 .channelEmojiPicker {
-  position: absolute;
-  right: 10px;
-  z-index: 2;
-  bottom: 10vh;
-  background-color: white;
+    position: absolute;
+    right: 10px;
+    z-index: 2;
+    bottom: 10vh;
+    background-color: white;
 }
 
 .channelSendMessage {
-  display: flex;
-  width: 100%;
-  padding-left: 5px;
-  padding-right: 5px;
+    display: flex;
+    width: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 .channelInputForm {
-  width: 100%;
-  z-index: 3;
-  position: absolute;
-  bottom: 0;
+    width: 100%;
+    z-index: 3;
+    position: absolute;
+    bottom: 0;
 }
 
 .channelInputForm .channelInputTextField {
-  width: 98.5%;
+    width: 98.5%;
 }
 
 .channelRightContent {
-  width: 27%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: rgba(26, 26, 29, 0.1);
+    width: 27%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(26, 26, 29, 0.1);
 }
 
 @media only screen and (max-width: 600px) {
-  .channelRightContent {
-    display: none;
-  }
-  .channelOuterContainer {
-    width: 98.7vw;
-    height: 105%;
-    align-self: center;
-  }
-  .channelInnerContainer {
-    width: 100%;
-  }
+    .channelRightContent {
+        display: none;
+    }
+    .channelOuterContainer {
+        width: 98.7vw;
+        height: 105%;
+        align-self: center;
+    }
+    .channelInnerContainer {
+        width: 100%;
+    }
 }
+
 
 /* Messages */
 
 .messages {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 88%;
-  z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 88%;
+    z-index: 1;
 }
 
 .sentText {
-  display: flex;
-  align-items: center;
-  font-family: Helvetica;
-  color: #828282;
-  letter-spacing: 0.3px;
+    display: flex;
+    align-items: center;
+    font-family: Helvetica;
+    color: #828282;
+    letter-spacing: 0.3px;
 }
 
 .messageBox {
-  background: #f3f3f3;
-  border-radius: 20px;
-  padding: 0px 20px;
-  color: white;
-  display: inline-block;
-  max-width: 80%;
-  display: flex;
-  margin-top: 10px;
-  align-items: center;
+    background: #f3f3f3;
+    border-radius: 20px;
+    padding: 0px 20px;
+    color: white;
+    display: inline-block;
+    max-width: 80%;
+    display: flex;
+    margin-top: 10px;
+    align-items: center;
 }
 
 .messageText {
-  width: 100%;
-  letter-spacing: 0;
-  float: left;
-  margin: 0;
-  font-size: 1.1em;
-  word-wrap: break-word;
+    width: 100%;
+    letter-spacing: 0;
+    float: left;
+    margin: 0;
+    font-size: 1.1em;
+    word-wrap: break-word;
 }
 
 .pl-10 {
-  padding-left: 10px;
+    padding-left: 10px;
 }
 
 .pr-10 {
-  padding-right: 10px;
+    padding-right: 10px;
 }
 
 .backgroundWhite {
-  background: rgb(250, 250, 250);
+    background: rgb(250, 250, 250);
 }
+
 .messageText img {
-  vertical-align: middle;
+    vertical-align: middle;
 }
 
 .messageContainer {
-  display: flex;
-  justify-content: flex-end;
-  padding: 0 5%;
-  margin-top: 6px;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 5%;
+    margin-top: 6px;
 }
 
 .backgroundGreen {
-  background: rgba(91, 225, 44, 0.5);
+    background: rgba(91, 225, 44, 0.5);
 }
 
 .backgroundYellow {
-  background: rgba(245, 205, 25, 0.5);
+    background: rgba(245, 205, 25, 0.5);
 }
 
 .backgroundRed {
-  background: rgba(234, 66, 40, 0.5);
+    background: rgba(234, 66, 40, 0.5);
 }
 
 .justifyStart {
-  justify-content: flex-start;
+    justify-content: flex-start;
 }
 
 .justifyCenter {
-  justify-content: center;
+    justify-content: center;
 }
 
 .justifyEnd {
-  justify-content: flex-end;
+    justify-content: flex-end;
 }
 
 .colorAdmin {
-  color: #f50057;
-  font-size: 0.9em;
+    color: #f50057;
+    font-size: 0.9em;
 }
 
 .colorUser {
-  color: #353535;
+    color: #353535;
 }
+
 
 /* ChannelsList */
 
 h1.channelsListHeading {
-  color: #e6e6ff;
-  display: flex;
-  justify-content: center;
-  padding-top: 15px;
-  padding-bottom: 0;
-  font-size: 1.5em;
-  margin-bottom: 10px;
-  width: 100%;
+    color: #e6e6ff;
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+    padding-bottom: 0;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    width: 100%;
 }
 
 div.channelsListOuterContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 83.5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 83.5vh;
 }
 
-div.MuiButtonBase-root.MuiListItem-root.channel.MuiListItem-gutters.MuiListItem-button
-  div {
-  padding-left: 30px;
-  padding-right: 30px;
-  color: #fafbfc;
-  text-decoration: none;
+div.MuiButtonBase-root.MuiListItem-root.channel.MuiListItem-gutters.MuiListItem-button div {
+    padding-left: 30px;
+    padding-right: 30px;
+    color: #fafbfc;
+    text-decoration: none;
 }
+
 
 /* Welcome */
 
 .welcomeOuterContainer {
-  position: absolute;
-  top: 0;
-  width: 78vw;
-  height: 89.5vh;
-  margin-top: 14vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #cccccc;
+    position: absolute;
+    top: 0;
+    width: 78vw;
+    height: 89.5vh;
+    margin-top: 14vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #cccccc;
 }
 
 .welcomeOuterContainer h1 {
-  margin: 0;
+    margin: 0;
 }
 
 .intro {
-  width: 40%;
-  text-align: center;
+    width: 40%;
+    text-align: center;
 }
 
 .summary {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 p.summaryHeading {
-  font-size: 2em;
-  color: #2196f3;
-  margin: 10px;
+    font-size: 2em;
+    color: #2196f3;
+    margin: 10px;
 }
 
 p.summaryTotalMessages {
-  font-size: 1.3em;
-  font-weight: 800;
-  color: rgba(0, 0, 0, 0.87);
+    font-size: 1.3em;
+    font-weight: 800;
+    color: rgba(0, 0, 0, 0.87);
 }
 
 div.summarySentimentsSection {
-  display: flex;
-  width: 80%;
-  justify-content: space-between;
-  margin-bottom: 1rem;
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    margin-bottom: 1rem;
 }
 
 div.summarySentiment {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 div.summarySentiment .sentimentIcon {
-  font-size: 3em;
-  color: #1a1a1d;
+    font-size: 3em;
+    color: #1a1a1d;
 }
 
 div.summarySentiment .sentimentDesc {
-  font-size: 0.8em;
-  color: #1a1a1d;
-  line-height: 2em;
+    font-size: 0.8em;
+    color: #1a1a1d;
+    line-height: 2em;
 }
 
 div.summarySentiment .sentimentPerc {
-  font-size: 1.5em;
-  color: #1a1a1d;
-  font-weight: 900;
+    font-size: 1.5em;
+    color: #1a1a1d;
+    font-weight: 900;
 }
 
 span.summaryOverallSentiment {
-  color: #f30889;
-  font-weight: 900;
-  font-size: 1.2em;
+    color: #f30889;
+    font-weight: 900;
+    font-size: 1.2em;
 }
 
 @media only screen and (max-width: 600px) {
-  .welcomeOuterContainer {
-    width: 100vw;
-    height: 91vh;
-  }
-
-  .intro {
-    width: 80%;
-    text-align: center;
-  }
-
-  p.summaryHeading {
-    font-size: 1.8em;
-    color: #2196f3;
-  }
+    .welcomeOuterContainer {
+        width: 100vw;
+        height: 91vh;
+    }
+    .intro {
+        width: 80%;
+        text-align: center;
+    }
+    p.summaryHeading {
+        font-size: 1.8em;
+        color: #2196f3;
+    }
 }
+
 
 /* NewChannel */
 
 div.newChannelForm {
-  text-align: center;
-  font-size: 1.1em;
+    text-align: center;
+    font-size: 1.1em;
 }
 
 h1.newChannelHeading {
-  color: rgba(255, 255, 255, 0.568);
-  font-size: 1em;
-  font-weight: 500;
-  padding: 0px;
-  margin-bottom: 5px;
+    color: rgba(255, 255, 255, 0.568);
+    font-size: 1em;
+    font-weight: 500;
+    padding: 0px;
+    margin-bottom: 5px;
 }
 
 .newChannelTextField {
-  width: 90%;
+    width: 90%;
 }
 
-.newChannelTextField
-  .MuiInputBase-root.MuiOutlinedInput-root.MuiInputBase-formControl.MuiInputBase-adornedEnd.MuiOutlinedInput-adornedEnd {
-  background-color: rgba(255, 255, 255, 0.192);
-  width: 100%;
+.newChannelTextField .MuiInputBase-root.MuiOutlinedInput-root.MuiInputBase-formControl.MuiInputBase-adornedEnd.MuiOutlinedInput-adornedEnd {
+    background-color: rgba(255, 255, 255, 0.192);
+    width: 100%;
 }
+
 
 /* UsersList */
 
 .usersListOuterContainer {
-  width: 100%;
-  height: 35%;
-  padding: 5%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: rgba(26, 26, 29, 0.1);
+    width: 100%;
+    height: 35%;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(26, 26, 29, 0.1);
 }
 
 .usersListInnerContainer {
-  width: 70%;
-  height: 100%;
-  padding: 6%;
-  overflow-y: scroll;
-  background-color: #f3f3f3;
-  border: 1px solid transparent;
-  border-radius: 4px;
+    width: 70%;
+    height: 100%;
+    padding: 6%;
+    overflow-y: scroll;
+    background-color: #f3f3f3;
+    border: 1px solid transparent;
+    border-radius: 4px;
 }
 
 .usersListHeading {
-  color: rgba(48, 46, 46, 0.925);
-  font-style: italic;
-  font-size: 0.9em;
-  margin: 4% 0;
+    color: rgba(48, 46, 46, 0.925);
+    font-style: italic;
+    font-size: 0.9em;
+    margin: 4% 0;
 }
 
 span.material-icons.MuiIcon-root.fas.fa-circle {
-  font-size: 0.65em;
-  margin-right: 10px;
-  color: green;
+    font-size: 0.65em;
+    margin-right: 10px;
+    color: green;
 }
 
 material-icons .usersListOnlineUserInfo {
-  font-size: 0.2;
+    font-size: 0.2;
 }
+
 
 /* ChannelSemanticAnalysis */
 
 .channelSentimentContainer {
-  margin-top: 5%;
-  height: 60%;
-  width: 90%;
-  display: flex;
-  align-self: center;
-  flex-direction: column;
-  align-items: center;
-  background-color: #1a1a1d;
+    margin-top: 5%;
+    height: 60%;
+    width: 90%;
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1a1a1d;
 }
 
 .channelSentimentHeading {
-  padding: 3%;
-  font-style: italic;
-  font-weight: bold;
-  color: white;
+    padding: 3%;
+    font-style: italic;
+    font-weight: bold;
+    color: white;
 }
 
 .channelSentimentData {
-  width: 100%;
-  height: 100%;
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .channelSentimentTotalMessages {
-  color: #2196f3;
-  font-size: 1.2em;
+    color: #2196f3;
+    font-size: 1.2em;
 }
 
 .channelOverallSentiment div,
 .channelOverallSentiment span {
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
+
 
 /* 404 */
 
 .notFoundContainer {
-  width: 100vw;
-  height: 100vh;
-  background-color: #1a1a1d;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: #1a1a1d;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .notFoundHeading {
-  font-size: 4em;
-  color: #2196f3;
-  padding: 0;
-  margin: 3px;
+    font-size: 4em;
+    color: #2196f3;
+    padding: 0;
+    margin: 3px;
 }

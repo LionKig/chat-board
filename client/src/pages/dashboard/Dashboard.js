@@ -68,16 +68,7 @@ const Dashboard = (props) => {
   const [currentChannel, setCurrentChannel] = useState(null);
 
   const getUser = (userId) => {
-    GET(
-      "user/" + userId,
-      {},
-      (response) => {
-        setUser(response.data);
-      },
-      (err) => {
-        setTimeout(getUser, 3000);
-      }
-    );
+    GET( "user/" + userId, {}, (response) => { setUser(response.data); }, (err) => { setTimeout(getUser, 3000); } );
   };
 
   const getChannels = () => {

@@ -10,7 +10,6 @@ import {
   Button,
   Typography,
   Link,
-  Container,
 } from '@material-ui/core';
 import Copyright from "../../components/Copyright";
 
@@ -71,10 +70,11 @@ const Register = (props) => {
   };
 
   return (
-    <Container component='main' maxWidth='xs'>
-      <Copyright />
-      <CssBaseline />      
-      <div className={"register" + classes.paper}>
+    <div className="authOuterContainer">
+      <Copyright />       
+      <div className="authInnerContainer">
+        <h3>Register</h3>     
+        <div className={"register" + classes.paper}>
         <form className={classes.form} noValidate>
           <TextField
             variant='outlined'
@@ -116,8 +116,7 @@ const Register = (props) => {
             variant='contained'
             color='primary'
             onClick={registerUser}
-            className={classes.submit}
-          >
+            className={classes.submit}>
             Register
           </Button>
         </form>
@@ -128,7 +127,8 @@ const Register = (props) => {
           </Link>
         </Typography>
       </div>
-    </Container>
+    </div>
+    </div>
   );
 };
 

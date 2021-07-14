@@ -54,8 +54,13 @@ const App = () => {
       <Switch>        
         <Route
           exact
-          path='/'
+          path='/login'
           render={() => <Login setupSocket={setupSocket} />}
+        />
+        <Route
+          exact
+          path='/'
+          render={() => <Redirect to={{ pathname: "/login" }} />}
         />
         <Route
           exact
@@ -66,7 +71,7 @@ const App = () => {
           exact
           path={["/dashboard", "/channel/:id"]}
           component={Dashboard}
-        />       
+        />
         <Route path='' component={NotFound} />
       </Switch>
     </BrowserRouter>
