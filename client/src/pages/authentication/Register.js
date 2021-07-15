@@ -1,17 +1,14 @@
 import React from "react";
-import CssBaseline from "@material-ui/core/CssBaseline";
 import { makeStyles } from "@material-ui/core/styles";
-import { Link as RouterLink, withRouter } from 'react-router-dom';
+import { Link , withRouter } from 'react-router-dom';
 import makeToast from "../../components/Toaster";
 import { POST } from "../../utils/api";
 
 import {
   TextField,
   Button,
-  Typography,
-  Link,
+  Typography,  
 } from '@material-ui/core';
-import Copyright from "../../components/Copyright";
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -71,7 +68,28 @@ const Register = (props) => {
 
   return (
     <div className="authOuterContainer">
-      <Copyright />       
+      <div className="row authcopyrow">
+          <div className="col-md-8 desc pad itemsheight">
+            <Link href='/'>
+                <img src="/logoname.png" alt="Go to Sign"/>
+            </Link>
+          </div>
+          <div className="col-md-4 dollar grey price middle space pad itemsheight">
+            {/*<p>Pulitzer Ce nter on Crisis Reporting – Fellow/Correspondent. Traveled across Congo for several weeks to
+              <br />report on election developments, and to raise awareness of the Congo conflict in US media.  Embedded
+              <br />with Moroccan, Pakistani and Uruguayan United Nations peacekeepers in Ituri, Lake Albert and South
+              <br />Kivu. Accredited with Ministry of Information and United Nations Mission in Congo (Summer 2006).
+              <br/>ntary report on the relation between the Congo conflict and the scramble for mineral resources (Fall 2006).
+              <br />Aired on PBS’ Foreign Exchange with Fareed Zakaria. Guest appearances on BBC’s World News
+            </p> */}
+            Pulitzer Ce nter on Crisis Reporting – Fellow/Correspondent. Traveled across Congo for several weeks to
+              report on election developments, and to raise awareness of the Congo conflict in US media.  Embedded
+              with Moroccan, Pakistani and Uruguayan United Nations peacekeepers in Ituri, Lake Albert and South
+              Kivu. Accredited with Ministry of Information and United Nations Mission in Congo (Summer 2006).
+              ntary report on the relation between the Congo conflict and the scramble for mineral resources (Fall 2006).
+              Aired on PBS’ Foreign Exchange with Fareed Zakaria. Guest appearances on BBC’s World News        
+          </div>
+        </div>
       <div className="authInnerContainer">
         <h3>Register</h3>     
         <div className={"register" + classes.paper}>
@@ -122,9 +140,9 @@ const Register = (props) => {
         </form>
         <Typography variant="body1">
           Already have an account?{' '}
-          <Link component={RouterLink} to="/">
+          {/*<Link component={RouterLink} to="/">
             Log In
-          </Link>
+          </Link>*/}
         </Typography>
       </div>
     </div>

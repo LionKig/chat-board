@@ -72,15 +72,7 @@ const Dashboard = (props) => {
   };
 
   const getChannels = () => {
-    GET(
-      "channel",
-      {
-        Authorization: "Bearer " + localStorage.getItem("CC_Token"),
-      },
-      (response) => {
-        setChannels(response.data);
-        loadCurrentChannel(response.data);
-      },
+    GET( "channel", { Authorization: "Bearer " + localStorage.getItem("CC_Token"), }, (response) => {setChannels(response.data); loadCurrentChannel(response.data); },
       (err) => {
         setTimeout(getChannels, 3000);
       }

@@ -1,13 +1,10 @@
 import React from "react";
 import { Link, withRouter } from "react-router-dom";
 import Button from "@material-ui/core/Button";
-import CssBaseline from "@material-ui/core/CssBaseline";
 import TextField from "@material-ui/core/TextField";
 import { makeStyles } from "@material-ui/core/styles";
-import { Typography } from "@material-ui/core";
 import makeToast from "../../components/Toaster";
 import { POST } from "../../utils/api";
-import Copyright from "../../components/Copyright";
 
 const useStyles = makeStyles((theme) => ({
   
@@ -55,55 +52,33 @@ const Login = (props) => {
   };
 
   return (
-    <div className="authOuterContainer">
-      <Copyright />  
-      
-      <div className="authInnerContainer">        
-        <div>
-        <h3>LOGIN</h3>
-        <TextField
-            variant='outlined'
-            margin='normal'
-            required
-            fullWidth
-            id='username'
-            label='Username'
-            name='username'
-            autoComplete='username'
-            inputRef={usernameRef}
-            autoFocus
-            style={{color:'#112233'}}
-          />
-          <TextField
-            variant='outlined'
-            margin='normal'
-            required
-            fullWidth
-            name='password'
-            label='Password'
-            type='password'
-            id='password'
-            inputRef={passwordRef}
-            autoComplete='current-password'
-          />
-        
-          <p>Don’t have an account?</p>
-          <Link to="/register">
-            Sign Up
-          </Link>          
+      <div className="authOuterContainer">      
+        <div className="authcopyrow">
+          <Link to='/'>
+            <img src="/logoname.png" alt="Go to Sign"/>
+          </Link>
+            <p>Pulitzer Ce nter on Crisis Reporting – Fellow/Correspondent. Traveled across Congo for several weeks to
+            report on election developments, and to raise awareness of the Congo conflict in US media.  Embedded
+            with Moroccan, Pakistani and Uruguayan United Nations peacekeepers in Ituri, Lake Albert and South
+            Kivu. Accredited with Ministry of Information and United Nations Mission in Congo (Summer 2006).
+            ntary report on the relation between the Congo conflict and the scramble for mineral resources (Fall 2006).
+            Aired on PBS’ Foreign Exchange with Fareed Zakaria. Guest appearances on BBC’s World News        
+            </p>
         </div>
-
-        <Button
-            fullWidth
-            variant='contained'
-            color='primary'
-            onClick={loginUser}
-            className={classes.submit}
-          >
-            Login
-          </Button>
+        <div className="authInnerContainer">
+          <div>
+            <h3>LOGIN</h3>
+            <TextField variant='outlined' margin='normal' required fullWidth id='username' label='Username' name='username' autoComplete='username'
+              inputRef={usernameRef} autoFocus style={{color:'#112233'}}/>
+            <TextField variant='outlined' margin='normal' required fullWidth name='password' label='Password' type='password' id='password'
+              inputRef={passwordRef} autoComplete='current-password'/>
+            <p>Don’t have an account?</p>
+            {/*<Link to="/register">Sign Up</Link>*/}
+          </div>
+          <Button fullWidth variant='contained' color='primary' onClick={loginUser} className={classes.submit}>Login</Button>        
+        </div>
+        
       </div>
-    </div>
   );
 };
 

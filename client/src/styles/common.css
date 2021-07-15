@@ -1,6 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
 * {
-    font-family: Montserrat;
     box-sizing: border-box;
     color: #586577;
 }
@@ -50,13 +49,25 @@ a {
     flex-wrap: wrap;
 }
 
-.authcopyrow>div {
+.authcopylink{
+    display:flex;
+    justify-content: center;
+    align-items:flex-end;
+    padding-left:1.25%;
+    padding-top:47.3%;    
+}
+
+.authcopytext{
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    padding-right: 10vw;
+    padding-left: 2.8%;
+    padding-right: 12.5%;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    font-size: 13pt;
+    padding-bottom: 1.5%;
 }
-
 
 /* Authentication */
 
@@ -65,6 +76,7 @@ a {
     width: 20%;
     background-color: #939999;
     align-items: center;
+    
 }
 
 .authOuterContainer {
@@ -614,3 +626,5 @@ material-icons .usersListOnlineUserInfo {
     padding: 0;
     margin: 3px;
 }
+
+/*-------------real Bootstarp*********************/
